@@ -2,12 +2,12 @@
     background-color: #003300;
 }
 
-body {
-    margin-top: 50px;
-}
-
 footer {
     font-size: x-small;
+}
+
+body {
+    padding-top: 80px;
 }
 
 #hero {
