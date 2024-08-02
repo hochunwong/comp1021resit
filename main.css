@@ -1,12 +1,18 @@
-body {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
 .navbar {
     background-color: #003300;
+}
+
+body {
+    margin-top: 50px;
 }
 
 footer {
     font-size: x-small;
 }
+
+#hero {
+    background-size: cover;
+    background-position: center;
+    background-image: url(/assets/hero.jpeg);
+}
+
