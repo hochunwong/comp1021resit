@@ -37,32 +37,35 @@
             <h2 class="pt-3">
                 Mini Gallery
             </h2>
-            <div class="container px-5 py-3">
-                <div id="tdyCarousel" class="carousel slide rounded-5 carousel-fade px-5">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#tdyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#tdyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#tdyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div id="tdyCarousel" class="carousel slide rounded-5 carousel-fade">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#tdyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#tdyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#tdyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/tdy_0.JPG" class="d-block w-100 rounded-5" alt="BUKC Safety Car leading grid">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/tdy_1.JPG" class="d-block w-100 rounded-5" alt="2 Leeds Drivers during BUKC 24 hour">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/tdy_2.JPG" class="d-block w-100 rounded-5" alt="Leeds Driver overtaking during race">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#tdyCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#tdyCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./assets/tdy_0.JPG" class="d-block w-100 rounded-5" alt="BUKC Safety Car leading grid">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/tdy_1.JPG" class="d-block w-100 rounded-5" alt="2 Leeds Drivers during BUKC 24 hour">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/tdy_2.JPG" class="d-block w-100 rounded-5" alt="Leeds Driver overtaking during race">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#tdyCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#tdyCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
         </section>
@@ -82,9 +85,8 @@
 
             <button type="button" class="btn btn-outline-primary mb-5" id="getLocation">Click me to find tracks near you!</button>
 
-            <p id="map">Please click button above to load this map. (may take couple seconds to load)</p>
+            <div width=100% height="720" class="text-center py-2" id="map">Please click button above to load this map. (may take couple seconds to load)</div>
 
-            
             <script src="./trackFinder.js"></script>
 
         </section>
