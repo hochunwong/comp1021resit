@@ -41,8 +41,11 @@ function success(pos) {
 
 
 function error(err) {
+    const denied = `
+    <p class="text-danger">Please allow me to see your location to use this feature! :(</p>
+    `;
+    document.getElementById("map").innerHTML = denied;
     console.log(err);
-    document.getElementById("map").innerHTML = loading;
 }
 
 const options = {
