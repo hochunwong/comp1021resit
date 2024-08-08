@@ -17,10 +17,39 @@
 
     <!--Main-->
     <div class="container">
-        <h1>Hello, world!</h1>
-        <p>
-            test
-        </p>
+        <h1 class="display-3 text-success pt-5 pb-2">
+            Contact the Committee
+        </h1>
+        <p class="lead">Get in touch with the committee! Submit your opinions via this form, and let yourself be heard!</p>
+
+        <div class="row justify-content-center my-5">
+
+            <div class="col-lg-6">
+                <form onsubmit="submitForm(event)">
+                    <label for="name" class="form-label pt-1">Your Name</label>
+                    <input type="name" id="name" class="form-control" placeholder="Your Name">
+
+                    <label for="email" class="form-label pt-4">Your Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="email@leeds.ac.uk">
+
+                    <label for="member" class="form-label pt-4">Are you currently a member with us?</label>
+                    <select name="member" id="member" class="form-select">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <label for="message" class="form-label pt-4">Your Message</label>
+                    <textarea name="message" id="message" class="form-control"></textarea>
+
+                    <div class="mb-4 text-center pt-4">
+                        <button type="submit" class="btn btn-outline-success">Submit</button>
+                    </div>
+                </form>
+
+                <script src="./contactForm.js"></script>
+            </div>
+
+        </div>
     </div>
     
 
