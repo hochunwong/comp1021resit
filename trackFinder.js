@@ -36,23 +36,24 @@ function success(pos) {
     .catch(err => {
         console.warn(err.message);
         document.getElementById("map").innerHTML = error;
-    });
+    })
 }
 
 
 function error(err) {
-    const denied = `
-    <p class="text-danger">Please allow me to see your location to use this feature! :(</p>
-    `;
-
-    document.getElementById("map").innerHTML = denied;
     console.log(err);
+    if (err.code == 1) {
+        const denied = `
+        Location services declined by user :(
+        `;
+        document.getElementById("map").innerHTML = denied;
+    }
 }
 
 const options = {
     enableHighAccuracy: true,
-    timeout: 10000
-};
+    timeout: 10000,
+}
 
 
 // Button that gets location
@@ -65,15 +66,12 @@ button.addEventListener('click', event=>{
     <span class="visually-hidden">Loading...</span>
     </div>
     `;
-    const error = `<p class="text-danger">Error, please try again... :(</p>`;
     document.getElementById("map").innerHTML = loading;
 
-
     if (!navigator.geolocation) {
-        document.getElementById("map").innerHTML = error;
         throw new Error("No geolocation :(");
     }
 
     navigator.geolocation.getCurrentPosition(success, error, options);
-})
+});
 
