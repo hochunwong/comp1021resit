@@ -44,6 +44,7 @@ function error(err) {
     const denied = `
     <p class="text-danger">Please allow me to see your location to use this feature! :(</p>
     `;
+
     document.getElementById("map").innerHTML = denied;
     console.log(err);
 }
@@ -64,7 +65,7 @@ button.addEventListener('click', event=>{
     <span class="visually-hidden">Loading...</span>
     </div>
     `;
-    const error = `<p class="text-danger">Error, please try again... :(</p>`
+    const error = `<p class="text-danger">Error, please try again... :(</p>`;
     document.getElementById("map").innerHTML = loading;
 
 
