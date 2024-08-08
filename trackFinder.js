@@ -33,16 +33,21 @@ function success(pos) {
 
         document.getElementById("map").innerHTML = map;
     })
-    .catch(err => console.warn(err.message));
+    .catch(err => {
+        console.warn(err.message);
+        document.getElementById("map").innerHTML = error;
+    });
 }
 
 
 function error(err) {
     console.log(err);
+    document.getElementById("map").innerHTML = loading;
 }
 
 const options = {
     enableHighAccuracy: true,
+    timeout: 20000
 };
 
 // Add API key to Google Maps iframe
@@ -54,7 +59,17 @@ const options = {
 var button = document.getElementById("getLocation");
 
 button.addEventListener('click', event=>{
+    const loading = `
+    <div class="spinner-border text-success" role="status">
+    <span class="visually-hidden">Loading...</span>
+    </div>
+    `;
+    const error = `<p class="text-danger">Error, please try again... :(</p>`
+    document.getElementById("map").innerHTML = loading;
+
+
     if (!navigator.geolocation) {
+        document.getElementById("map").innerHTML = error;
         throw new Error("No geolocation :(");
     }
 
