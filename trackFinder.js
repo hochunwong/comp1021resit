@@ -44,7 +44,7 @@ function error(err) {
     console.log(err);
     if (err.code == 1) {
         const denied = `
-        Location services declined by user :(
+        <p class="text-danger">Location services declined by user :(</p>
         `;
         document.getElementById("map").innerHTML = denied;
     }
@@ -69,7 +69,7 @@ button.addEventListener('click', event=>{
     document.getElementById("map").innerHTML = loading;
 
     if (!navigator.geolocation) {
-        throw new Error("No geolocation :(");
+        console.log("Failed in !navigator.geolocation");
     }
 
     navigator.geolocation.getCurrentPosition(success, error, options);
