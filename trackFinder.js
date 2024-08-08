@@ -47,11 +47,8 @@ function error(err) {
 
 const options = {
     enableHighAccuracy: true,
-    timeout: 20000
+    timeout: 10000
 };
-
-// Add API key to Google Maps iframe
-
 
 
 // Button that gets location
